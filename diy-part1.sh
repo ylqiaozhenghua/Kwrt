@@ -16,3 +16,7 @@
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+# Modify flash size
+sed -i 's/0x7280000/0x1cc00000/g' devices/mediatek_filogic/diy/target/linux/mediatek/dts/mt7986a-netcore-n60-pro.dts
+sed -i 's/112640k/505856k/g' devices/mediatek_filogic/patches/22-netcore-n60-pro.patch
