@@ -17,3 +17,8 @@ sed -i "s/ fitblk / /g" target/linux/mediatek/image/filogic.mk
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+
+# Modify flash size
+sed -i 's/0x7280000/0x1cc00000/g' devices/mediatek_filogic/diy/target/linux/mediatek/dts/mt7986a-netcore-n60-pro.dts
+sed -i 's/112640k/471040k/g' devices/mediatek_filogic/patches/22-netcore-n60-pro.patch
+
