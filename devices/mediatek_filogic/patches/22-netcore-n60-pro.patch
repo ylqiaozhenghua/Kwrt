@@ -54,7 +54,7 @@
 +  PAGESIZE := 2048
 +  KERNEL_IN_UBI := 1
 +  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-usb3
-+  IMAGE_SIZE := 112640k
++  IMAGE_SIZE := 471040k
 +  IMAGES += factory.bin
 +  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
 +  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
